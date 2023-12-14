@@ -1,5 +1,0 @@
-2023-12-01 19:14:10 [main] INFO  c.m.twittertokafka.TwitterToKafka - Starting TwitterToKafka on Legion with PID 18164 (C:\Users\likit\OneDrive\Desktop\java\eda\twitter-to-kafka\target\classes started by likit in C:\Users\likit\OneDrive\Desktop\java\eda\twitter-to-kafka)
-2023-12-01 19:14:10 [main] INFO  c.m.twittertokafka.TwitterToKafka - No active profile set, falling back to default profiles: default
-2023-12-01 19:14:10 [main] INFO  c.m.twittertokafka.TwitterToKafka - Started TwitterToKafka in 0.853 seconds (JVM running for 1.712)
-2023-12-01 19:14:10 [main] INFO  c.m.twittertokafka.TwitterToKafka - Welcome to the Twitter to Kafka Service
-2023-12-01 19:14:11 [main] INFO  c.m.twittertokafka.TwitterToKafka - [Java, Spring, Kafka, Microservices, Docker]
