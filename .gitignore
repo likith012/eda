@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### Project ###
-twitter-to-kafka/logs
+twitter-to-kafka/logs/
