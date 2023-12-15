@@ -20,7 +20,7 @@
 	<modules>
 		<module>app-config-data</module>
         <module>twitter-to-kafka</module>
-		<!-- <module>kafka</module> -->
+		<module>kafka</module>
     </modules>
 
 	<properties>
