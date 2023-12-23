@@ -34,4 +34,4 @@ build/
 
 ### Project ###
 twitter-to-kafka/logs/
-kafka/kafka-model/src/main/java/com/microservices/kafka/kafkamodel/KafkaModel.java
+kafka/kafka-model/src/main/java/com/microservices/kafka/kafkamodel/TwitterAvroModel.java
