@@ -33,7 +33,7 @@ public class TwitterProducer implements Producer<Long, TwitterAvroModel>{
 
         LOG.info("Added callback");
 
-        // callback(topicName, value, kafkaResultFuture);
+        callback(topicName, value, kafkaResultFuture);
 
     }
 
