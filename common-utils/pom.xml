@@ -6,13 +6,12 @@
 
     <parent>
         <groupId>com.microservices</groupId>
-        <artifactId>kafka</artifactId>
+        <artifactId>eda</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.microservices.kafka</groupId>
-    <artifactId>kafka-admin</artifactId> 
+    <groupId>com.microservices</groupId>
+    <artifactId>common-utils</artifactId> 
     <packaging>jar</packaging>
 
     <dependencies>
@@ -22,19 +21,17 @@
             <artifactId>app-config-data</artifactId>
         </dependency>
 
+        <!-- RETRY DEPENDENCIES -->
         <dependency>
-            <groupId>com.microservices</groupId>
-            <artifactId>common-utils</artifactId>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+            <version>${spring-retry.version}</version>
         </dependency>
-
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
     </dependencies>
 

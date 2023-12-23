@@ -102,7 +102,7 @@ public class MockTwitterStreamRunner implements StreamRunner {
             try {
                 while (true) {
                     String tweet = getRandomTweet(filterKeywords, mockTweetMinLength, mockTweetMaxLength);
-                    LOG.debug("Mock tweet: {}", tweet);
+                    LOG.info("Mock tweet: {}", tweet);
 
                     Status status = TwitterObjectFactory.createStatus(tweet);
                     twitterStatusListener.onStatus(status);

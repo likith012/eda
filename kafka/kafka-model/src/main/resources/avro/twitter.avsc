@@ -1,7 +1,7 @@
 {
     "namespace": "com.microservices.kafka.kafkamodel",
     "type": "record",
-    "name": "KafkaModel",
+    "name": "TwitterAvroModel",
     "fields": [
         {"name": "userId", "type": "long"},
         {"name": "id", "type": "long"},

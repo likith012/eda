@@ -4,12 +4,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class KafkaModelTest {
-    private KafkaModel kafkaModel;
+class TwitterAvroModelTest {
+    private TwitterAvroModel kafkaModel;
 
     @BeforeEach
     public void setUp() {
-        kafkaModel = new KafkaModel();
+        kafkaModel = new TwitterAvroModel();
     }
 
     @Test
