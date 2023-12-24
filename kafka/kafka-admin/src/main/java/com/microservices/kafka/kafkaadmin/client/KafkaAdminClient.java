@@ -63,7 +63,7 @@ public class KafkaAdminClient {
     private CreateTopicsResult doCreateTopics(RetryContext retryContext) {
         List<String> topicNames = kafkaConfig.getTopicNamesToCreate();
 
-        LOG.info("Creating {} topics, retrying {} time", topicNames.size(), retryContext.getRetryCount());
+        LOG.info("Creating {} topic(s), retrying {} time", topicNames.size(), retryContext.getRetryCount());
 
         List<NewTopic> kafkaTopics = topicNames.stream().map(topic -> new NewTopic(
                 topic.trim(), 
@@ -135,6 +135,8 @@ public class KafkaAdminClient {
             sleep(sleepTime);
             sleepTime *= multiplier;
         }
+
+        LOG.info("Schema registry is up and running");
     }
 
     private HttpStatus getSchemaRegistryStatus() {

@@ -89,7 +89,7 @@ public class MockTwitterStreamRunner implements StreamRunner {
         int mockTweetMaxLength = configData.getMockTweetMaxLength();
         long mockTweetSleepMs = configData.getMockTweetSleepMs();
         
-        LOG.info("Starting mock twitter stream for keywords {}", configData.getTwitterKeywords());
+        LOG.debug("Starting mock twitter stream on a separate thread with keywords {}", configData.getTwitterKeywords());
 
         simulateTwitterStream(filterKeywords, mockTweetMinLength, mockTweetMaxLength, mockTweetSleepMs);
     }
@@ -102,7 +102,7 @@ public class MockTwitterStreamRunner implements StreamRunner {
             try {
                 while (true) {
                     String tweet = getRandomTweet(filterKeywords, mockTweetMinLength, mockTweetMaxLength);
-                    LOG.info("Mock tweet: {}", tweet);
+                    LOG.debug("Mock tweet: {}", tweet);
 
                     Status status = TwitterObjectFactory.createStatus(tweet);
                     twitterStatusListener.onStatus(status);

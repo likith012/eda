@@ -28,8 +28,8 @@ public class RandomTweetGenerator {
                             .build();
         try (Response response = httpClient.newCall(request).execute()) {
             if (!response.isSuccessful()) {
-                LOG.error("Unexpected code {}", response);
-                throw new IOException("Unexpected code " + response);
+                LOG.error("Unexpected response code from randomuser.me {}", response);
+                throw new IOException("Unexpected response code from randomuser.me " + response);
             }
 
             String responseBody = response.body().string();

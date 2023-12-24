@@ -28,13 +28,10 @@ public class TwitterProducer implements Producer<Long, TwitterAvroModel>{
 
     @Override
     public void send(String topicName, Long key, TwitterAvroModel value) {
-        LOG.info("Sending message to topic: {}, key: {}, value: {}", topicName, key, value);
+        LOG.debug("Trying to send message to a kafka topic: {}, key: {}, value: {}", topicName, key, value);
+
         ListenableFuture<SendResult<Long, TwitterAvroModel>> kafkaResultFuture = kafkaTemplate.send(topicName, key, value);
-
-        LOG.info("Added callback");
-
         callback(topicName, value, kafkaResultFuture);
-
     }
 
     @PreDestroy
@@ -50,7 +47,7 @@ public class TwitterProducer implements Producer<Long, TwitterAvroModel>{
             @Override
             public void onSuccess(SendResult<Long, TwitterAvroModel> result) {
                 RecordMetadata recordMetadata = result.getRecordMetadata();
-                LOG.info("Sent Message");
+                LOG.info("Message sent to a kafka topic: {}, message: {}", topicName, message);
                 LOG.debug("Received new metadata. Topic: {}; Partition {}; Offset {}; Timestamp {}", 
                         recordMetadata.topic(),
                         recordMetadata.partition(), 
